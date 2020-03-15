@@ -1,0 +1,29 @@
+﻿@model IEnumerable<app2.Models.RespostaConvidados>
+@{
+    ViewData["Title"] = "ListaFinal";
+}
+
+<h1>ListaFinal</h1>
+<hr />  
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>     
+            <th>Telefone</th>
+
+        </tr>       
+    </thead>       
+    <tbody>
+        <!--PARA fazer uma interação pela coleção ou método 
+            criada em HomeController "ListaConvidados"-->
+        @foreach (RespostaConvidados item in Model)
+        {
+            <tr><!-- Para construir uma linha-->
+                <td>@item.Nome</td>
+                <td>@item.Email</td>
+                <td>@item.Telefone</td>
+            </tr>
+        }
+    </tbody>
+</table>

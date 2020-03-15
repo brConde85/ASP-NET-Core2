@@ -1,0 +1,25 @@
+﻿<!--Para acessarmos informações dentro do model obetendo acesso a resposta dos convidados-->
+@model app2.Models.RespostaConvidados
+
+@{
+    ViewData["Title"] = "Obrigado";
+}
+
+<h1>Obrigado</h1>
+
+<p>Agradeço pelo seu registro,@Model.Nome .</p>
+
+@if (Model.Presente == true)
+{
+<p>
+    Que bom, ficarei a sua espera.
+    =)
+</p>
+}else
+	{
+        <p>Que pena, fica para próxima.
+           =(</p>	         
+	}
+<div>
+    Clique <a asp-action="ListaConvidados">AQUI</a> para ver a lista de convidados.
+</div>
