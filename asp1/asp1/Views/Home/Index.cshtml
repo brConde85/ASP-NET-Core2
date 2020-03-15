@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "MY HOME PAGE";
+}
+
+    <div><!--Divisão de camadas para melhor identação do código-->
+        <h5>My View Tester</h5><!--Titulo tamanho pequeno-->
+        <hr /> <!--linha para separação-->
+        <p>Nome: @ViewBag.Nome @ViewBag.SobreNome</p> <!-- Utilizando conteúdo estático para nome, idade,... e dinâmico "função: ViewBag"-->
+        <p>Idade: @ViewBag.Idade anos de idade</p> <!--Chamando valores mistos int e string-->
+        <p>Sexo: @ViewBag.Sexo</p>
+        <p>Estado civil: @ViewBag.EstCiv</p>
+        <p>Bool: @ViewBag.Bool</p>
+    </div>
+    
+    

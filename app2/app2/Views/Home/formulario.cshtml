@@ -1,0 +1,48 @@
+﻿@model app2.Models.RespostaConvidados
+<!-- Para ligarmos o atributo Nome que está em models foi inserida a expressão acima -->
+@{
+    ViewData["Title"] = "Formulário";
+}
+
+<h1>Formulário</h1>
+<hr />
+
+<div>
+
+    <form asp-action="Formulario" method="post">
+        <!--Divisor para separar conteúdo-->
+        <div>
+            <!--Label iniciada antes do input para orientação do usuário-->
+            <label asp-for="Nome">Informe seu nome: </label>
+            <!--Input campo onde o usuário irá preencher coletando seu nome-->  
+            <input asp-for="Nome" />
+        </div>
+
+        <div>
+            <label asp-for="Email">Informe seu e-mail: </label>
+            <input asp-for="Email" />
+        </div>
+
+        <div>
+            <label asp-for="Telefone">Informe seu telefone: </label>
+            <input asp-for="Telefone" />
+        </div>
+
+        <div>
+            <label asp-for="Presente">Você irá comparecer? </label>
+            <!--Criação do SELECT para o usário selecionar uma opção assim extraindo a opção de verdadeiro e false-->
+            <select asp-for="Presente">
+                <!--Option campo em que aparecerá as opções ao usuário -->
+                <option value="">ESCOLHA UMA OPÇÃO</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
+        <hr />
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+
+</div>
+
