@@ -11,5 +11,15 @@
     <title>Index</title>
 </head>
 <body>
+
+    <h1>Este conteúdo pertence a página principal.</h1>
+    <hr />
+    <!--Com a utilização dessa expressão podemos reutilizar o codigo varias vezes dentro da msm aplicação-->
+    @Html.Partial("_parte1")
+    @Html.Partial("_parte2")
+    @Html.Partial("_parte1")
+    @Html.Partial("_parte2")
+    @Html.Partial("_parte1")
+
 </body>
 </html>

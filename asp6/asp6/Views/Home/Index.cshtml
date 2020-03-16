@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h1> Este conteúdo esta na pag principal</h1>
+    
+    <!--Para exibir o coteudo de uma outra pagina pode-se realizar de duas formas-->
+    @Html.Partial("_parte1")
+        
+    <partial name="_parte1"/>    
+
+</body>
+</html>
