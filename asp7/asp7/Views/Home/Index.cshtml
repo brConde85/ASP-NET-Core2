@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<h4>View principal</h4>
+
+<hr />
+
+<!--Comentario de HTML-->
+@**Ao  informar esse tipo de comentario o interpretador ele idenrificara que este não é uma HTML normal, um comentario na versão razor*@
+
+@*valor = 100*@ 
+<p>Valor: @ViewData["valor"]</p>
+<p>Valor: @ViewBag.valor</p><!--Forma antiga para passar um valor para um atributo-->
+
+@*passar o valor para 200**@
+
+@{ ViewData["valor"] = 200;}
+<p>Valor: @ViewData["valor"]</p>
+
+@*Carregar a View parcial*@
+@Html.Partial("_parte1")<!--Dessa forma podemos passar de forma automatica o dicionário do ViewData-->
+
+@*Retorna a view Principal*@
+<p>Valor:@ViewData["valor"]</p> 
+<!--ao inserir o viewData dentro da View PRINCIPAL este guarda o valor principal não sobrepondo com o valor inserido na view parcial-->
