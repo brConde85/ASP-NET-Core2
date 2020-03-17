@@ -33,5 +33,20 @@ namespace asp10.Controllers
             return "Estou na ação 2 Nova ";
 
         }
+
+        [Route("home/adicionar/{nome?}/{sobrenome?}")]
+        // Passando como parâmetro o id para inserção no browser 
+        public string add(string nome, string sobrenome)
+        {
+            //Ex.:https://localhost:44399/home/adicionar/Bruno/Marciano 
+            return ("Estou adicionando meu nome: "+ nome + " " + sobrenome );
+        }
+        // Adicionando route para receber valores e apresentar sua soma
+        [Route("home/parcela/{x?}/{y?}")]
+        public string parcel(int x, int y)
+        {
+            //Ex.: https://localhost:44399/home/parcela/12/15
+            return "Soma das parcelas: " + x +" + "+ y + " = "+ (x + y).ToString();
+        }
     }
 }
