@@ -6,14 +6,20 @@
 <!--Como Bag recebeu os valores do atributo podemos carregar todos os atributos de cada objeto-->
 <h1>Cliente</h1>
 <p>Nome: @Model.humano.nome @Model.humano.sobrenome </p>
-
 <p>Idade: @Model.humano.idade </p>
-
-<hr />   
 
 <h1>Carro</h1>
 <p>Marca: @Model.automovel.marca </p>
 <p>Ano: @Model.automovel.ano </p>
 <p>Cor: @Model.automovel.cor </p>
+<hr />
 
+<!--Para carregarmos uma pagina dentro de outra de forma correta-->
+<partial name="_parcial" />
+
+@*Para carregarmos de uma nova fomra a Html porem mas naão é muito utilizado*@ 
+@*@Html.Partial("_parcial")*@
+<hr />
+
+@*@Html.Partial("test")*@
 

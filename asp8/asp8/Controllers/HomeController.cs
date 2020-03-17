@@ -23,15 +23,15 @@ namespace asp8.Controllers
                 marca ="Ford", cor = "Preto", ano = "1996"
             };
 
-            // Inserindo homem e carro dentro da classe saco para podermos exibilos dentro da view
-            Bag saco = new Bag()
+            // Inserindo homem e carro dentro da classe ou pacote para podermos exibilos dentro da view
+            Bag data = new Bag()
             {
                 humano = homem, automovel = carro
             };
 
-            // Passando "saco" como parametro como retorno para que assim possamos carregar os atributos na view/index
+            // Passando "data" como parametro como retorno para que assim possamos carregar os atributos na view/index
             
-            return View(saco);
+            return View(data);
         }
     }
 }
