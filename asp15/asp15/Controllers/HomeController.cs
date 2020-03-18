@@ -12,5 +12,10 @@ namespace asp15.Controllers
         {
             return View();
         }
+
+        public IActionResult Pag2()
+        {
+            return View();
+        }
     }
 }
