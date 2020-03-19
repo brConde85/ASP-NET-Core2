@@ -9,6 +9,41 @@
     color:white;
 }
 
+.Cabecalho a {
+   padding: 0px 20px; /*para separarmos os links uns dos outro coerentemente*/
+   text-decoration: none;
+   color: rgb(200,200,200);
+}
+
+.Cabecalho a:hover {
+   text-decoration: none;
+   color: white;
+} 
+
+/*Navegação*/
+.Navegacao {
+    background-color: rgb(41, 85, 131); /*Mesma cor do rodapé*/
+}
+
+
+/*Param fazermos as HiperLigações dos links defs navegação*/
+.Navegacao a{
+    padding: 0px 20px; /*para separarmos os links uns dos outro coerentemente*/
+    text-decoration: none;
+    color: rgb(200,200,200);
+}
+
+.Navegacao a:hover {
+   text-decoration: none;
+   color: white;
+} 
+
+/*Conteudo*/
+.Conteudo{
+    background-color: white;
+    color: black;
+}
+
 /*Rodape*/
 .Rodape{
     /*plano de fundo*/    

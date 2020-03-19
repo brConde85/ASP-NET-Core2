@@ -1,4 +1,5 @@
 ﻿<div class="container-fluid Cabecalho p-3">
-    <h1><i class="fa fa-home pr-5"> @ViewBag.nome_empresa</i></h1> 
+    @*Colocamos <a> e inserimos os comandos abaixo para informando primeiro o controller e depois a pagina inicial*@
+    <h1><a asp-controller="home" asp-action="index"><i class="fa fa-home pr-3"></i></a>@ViewBag.nome_empresa</h1> 
     
 </div>

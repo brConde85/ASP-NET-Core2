@@ -1,4 +1,8 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿<div class="container-fluid Navegacao p-3 text-right">
+    @*Text-right define o alinhamento para a esquerda*@
+    @*Criando as hiper ligações entre as paginas que ira apontar primeiro para um controlador e em seguida realizar um ação*@
+    <a asp-controller="Home" asp-action="index">Início</a>| @*Foi colocado um separador manualmente*@
+    <a asp-controller="Servicos" asp-action="index">Serviços</a>|
+    <a asp-controller="Contato" asp-action="index">Contato</a>
+
+</div>
