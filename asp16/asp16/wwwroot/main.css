@@ -1,2 +1,35 @@
 ﻿body {
+    background-color: black;
+    color: white;
+}
+
+/*Cabecalho*/
+.Cabecalho{
+    background-color: rgb(59, 108, 161);
+    color:white;
+}
+
+/*Rodape*/
+.Rodape{
+    /*plano de fundo*/
+    background-color: rgb(41, 85, 131);
+    /*cor da fonte*/
+    color:rgb(216, 231, 233);
+}
+
+/*object "a" apos sociais é a ancora ou icone*/
+.Sociais a{
+    font-size: 1.5em;
+    /*padding serve para fomatar cada um dos links e separa-los uns dos outros*/
+    padding: 0px 20px;
+    /*text-decoration serve para carregar as formatações tradicionais das ancoras, como não queremos colocamos "none"*/
+    text-decoration: none;
+    /*DEFINIÇÃO de cor dos links*/
+    color: rgb(200,200,200);
+}
+
+/*Define as cores que os icones iram ficar ao passarmos o mouse em cima do icone*/
+.Sociais a:hover {
+    text-decoration: none;
+    color: white;
 }
