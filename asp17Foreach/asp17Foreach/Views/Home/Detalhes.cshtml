@@ -1,0 +1,26 @@
+﻿@model asp17Foreach.Models.Clientes
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalhes</title>
+</head>
+<body>
+
+    @if (@Model.Id == 2)
+    {
+        <p>O cara é muito Granoloso!!! Possui o id: @Model.Id</p>
+    }else
+    {
+        <p>A pessoa escolhida é habilidosa possui o id: @Model.Id</p>
+    }
+
+    <a asp-action="index">Voltar</a>
+
+</body>
+</html>

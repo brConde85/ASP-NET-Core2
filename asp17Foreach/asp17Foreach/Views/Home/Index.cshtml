@@ -1,0 +1,27 @@
+﻿@model List<asp17Foreach.Models.Clientes>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Teste Simples</h1>
+    <hr />
+    <h2>Vamos verificar se a pessoa é granola</h2>
+    <p></p>
+    @*Foreach nos permite iterar sobre uns itens de sua coleção ou seja percorrer os itens de 
+    uma lista de objetos e para cada item desta lista realizar um conjunto de instruções.*@ 
+    @foreach (var clientes in Model)
+    {
+        /*Html.ActionLink foi criado para nos podermos criar um link inserindo o nome do link, depois o nome 
+        da função que irá ser criada no HomeController em seguida o caminho para passar o id do cliente.*/
+    <p> @clientes.Nome @clientes.SobreNome - @Html.ActionLink("Detalhes","Detalhes",new { id = clientes.Id})</p>
+    }
+</body>
+</html>
