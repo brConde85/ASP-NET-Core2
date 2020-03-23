@@ -1,0 +1,44 @@
+﻿@*IEnumerable: Método de entrada que nos permite realizar iterações em uma lista utilizando o foreach.
+    Depois o caminho para capturar os atributos*@
+@model IEnumerable<asp18.Models.Cliente>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>CLIENTES</h1>
+    <hr />
+    <a asp-action="NovoCliente">Adicinar Cliente</a>
+    <hr />
+
+    @*Criado para verificar se a lista contém ou não dados*@
+    @if (Model.Count() != 0)
+    {
+        // Apresentar a lista de clientes
+        foreach (var item in Model)
+        {                                   
+            <p>
+                Nome: @item.Nome | Telefone: @item.Telefone | 
+                @*Link para pegar o metodo dentro do HomeController por isso necessita do msm nome do controlador*@
+                <a asp-controller="Home" asp-action="Apagar" asp-route-id="@item.Id">Apagar</a> | 
+                <a asp-controller="Home" asp-action="Editar" asp-route-id="@item.Id">Editar</a>
+            </p>
+
+            <hr />
+        }
+        //metodo para  contar quantos clientes temos na coleção
+        <p>Clientes: @Model.Count()</p>
+    }
+    else
+    {
+        <p>Não existem clientes cadastrados.</p>
+    }
+</body>
+</html>

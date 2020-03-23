@@ -1,0 +1,26 @@
+﻿@model asp18.Models.Cliente
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+    <h1>Editar Dados</h1>
+    <hr />
+
+    <form asp-controller="Home" asp-action="Editar">
+        @*Está TagHelper serve para criar um elemento do tipo Hidden ou escondido para uma determina propriedade do meu model*@
+        @Html.HiddenFor(Model => Model.Id)
+        @*TextBoxFor irá  dizer para associar ao nome*@
+        <div>Nome: @Html.TextBoxFor(Model => Model.Nome)</div>
+        @*TextBoxFor irá  dizer para associar ao telefone*@
+        <div>Telefone: @Html.TextBoxFor(Model => Model.Telefone)</div>
+        <button>Editar</button>
+    </form>
+    <a asp-controller="Home" asp-action="Index">Cancelar</a>
+
+</body>
+</html>

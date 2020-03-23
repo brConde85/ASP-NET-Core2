@@ -1,0 +1,23 @@
+﻿@model asp18.Models.Cliente
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html metaCharSet ="UTF-8">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NovoCliente</title>
+</head>
+<body>
+    <h1>Formulário Para Adicinar Novos Clientes</h1>
+    <hr />
+    @*Criação de um formulário*@
+    <form asp-controller="Home" asp-action="NovoCliente" method="post">
+        Nome: <input asp-for="Nome"><br />
+        Telefone: <input asp-for="Telefone"><br /> 
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
