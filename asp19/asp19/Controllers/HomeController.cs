@@ -32,5 +32,10 @@ namespace asp19.Controllers
             Dados.AdicionarCliente(cliente);
             return RedirectToAction("AdicionarCliente");
         }
+        // Metodo para pegar o id do cliente que será usado em nossa view para edição de Clientes
+        public IActionResult EditarCliente(int id)
+        {
+
+        }
     }
 }
