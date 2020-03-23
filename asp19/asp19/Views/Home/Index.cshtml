@@ -6,4 +6,23 @@
 <h2 class="titulo">@ViewBag.Subtitle</h2>
 <hr />
 
+    @*Para centralizarmos os dois quadros*@
+    <div class="row justify-content-md-center">
+        @*"Card" para os quadros ficarem coom um aspecto visual arredondado*@
+        <div class="col-4 text-center card bg-light p-5 m-2">
+            <p class="text-center p-3">Visualização da lista de Clientes, registrados na aplicação.</p>
+            <div>
+                @*Definindo uma hiperlink com o aspecto visual de um botão*@
+                <a asp-controller="Home" asp-action="ListaClientes" class="btn btn-primary">Lista de Clientes</a>
+            </div>
+        </div>
+
+        <div class="col-4 text-center card bg-light p-5 m-2">
+            <p class="text-center p-3">Adicionar novos clientes a aplicação.</p>
+            <div>
+                @*Definindo uma hiperlink com o aspecto visual de um botão*@
+                <a asp-controller="Home" asp-action="AdicionarCliente" class="btn btn-primary">Adicionar Clientes</a>                
+            </div>
+        </div>
+    </div>
 

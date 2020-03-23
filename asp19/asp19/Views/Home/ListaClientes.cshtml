@@ -1,0 +1,52 @@
+﻿@model IEnumerable<asp19.Models.Cliente>
+@{
+    ViewData["Subitle"] = "Lista de Clientes Registrados";
+}
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="titulo">@ViewBag.Subitle</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a asp-controller="Home" asp-action="AdicionarCliente" class="btn btn-primary">Adicinar novo cliente</a>
+    </div>
+</div>
+
+<hr />
+
+@*Apresentação dos dados dos clientes*@
+@if (Model.Count() == 0)
+{    
+    <p>Não existem clientes cadastrados...</p>
+}else
+{
+    //Apresentar a tabela com os clientes registrados
+    <table class="table table-striped">@*Criando tabela com cores de fundo distintas*@
+        <thead class="thead-dark">@*Table Head define o fundo escuro e as letras brancas*@
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Telefone</th>
+                <th></th>@*botões para editar o item da tabela*@
+            </tr>
+        </thead>
+        <tbody>
+            @*Table Body*@
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.SobreNome</td>
+                    <td>@cliente.Telefone</td>
+                    <td>...</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    //Exibe um total de clientes registrados em uma tabela
+    <p>Total de Clientes: <b> @Model.Count()</b></p>
+}
+<div>
+    @*Criando botão para voltar ao index*@
+    <a asp-controller="Home" asp-action="index" class="btn btn-primary">Voltar</a>
+</div>

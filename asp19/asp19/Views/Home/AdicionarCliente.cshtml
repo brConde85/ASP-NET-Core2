@@ -1,0 +1,34 @@
+﻿@model asp19.Models.Cliente 
+@*Para acessar os dados do cliente*@
+@{
+    ViewData["Subtitle"] = "Adicionar Cliente";
+}
+
+<h2 class="titulo">@ViewBag.Subtitle</h2>
+<hr />
+@*Incorporar o formulário de cadastro no interior de uma card*@
+<div class="card bg-light p-5">
+    @*Criação de um formulario de acordo com um determinado model utilizando os dados de nossos clientes*@
+    <form asp-controller="Home" asp-action="AdicionarCliente">
+        <div class="form-group">
+            @*Para apresentar em nossa label o valor que está em nossa Model.Cliente*@
+            @Html.LabelFor(model => model.Nome)
+            <br />
+            @Html.TextBoxFor(model => model.Nome)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.SobreNome)
+            <br />
+            @Html.TextBoxFor(model => model.SobreNome)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Telefone)
+            <br />
+            @Html.TextBoxFor(model => model.Telefone)
+        </div>
+        
+        <a asp-controller="home" asp-action="index" class="btn btn-primary">Voltar</a>
+        <button class="btn btn-primary">Salvar</button>       
+    </form>
+</div>
+
