@@ -38,10 +38,10 @@
                     <td>@cliente.Nome</td>
                     <td>@cliente.SobreNome</td>
                     <td>@cliente.Telefone</td>
-                    <td>
+                    <td class="text-right">
                         @*Botões para editar e apagar clientes "asp-action" indica o metodo do controller que será usado para realizar a ação*@
-                        <a asp-controller="Home" asp-action="EditarCliente" asp-route="@cliente.Id" class="btm btn-primary"><i class="fa fa-pencil"></i></a>
-                        <a asp-controller="home" asp-action="DeletarCliente" asp-route="@cliente.Id" class="btn btn-primary">,<i class="fa fa-trash"></i>Apagar</a>
+                        <a asp-controller="home" asp-action="EditarCliente" asp-route-id="@cliente.Id" class="btn btn-primary"><i class="fa fa-pencil"></i> Editar</a>
+                        <a asp-controller="home" asp-action="ApagarCliente" asp-route-id="@cliente.Id" class="btn btn-primary"><i class="fa fa-trash"></i> Apagar</a>
                     </td>
                 </tr>
             }

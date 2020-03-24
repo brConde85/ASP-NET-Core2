@@ -35,7 +35,21 @@ namespace asp19.Controllers
         // Metodo para pegar o id do cliente que será usado em nossa view para edição de Clientes
         public IActionResult EditarCliente(int id)
         {
+            //Editar dados do cliente selecionado
+            return View(Dados.DadosCliente(id));
+        }
 
+        [HttpPost]
+        public IActionResult EditarCliente (Cliente cliente)
+        {
+            Dados.EditarCliente(cliente);
+            return RedirectToAction("ListaClientes");
+        }
+                
+        public IActionResult ApagarCliente(int id)
+        {
+            Dados.ApagarCliente(id);
+            return RedirectToAction("ListaClientes");
         }
     }
 }

@@ -1,0 +1,35 @@
+﻿@model asp19.Models.Cliente
+@{
+    ViewData["Subtitle"] = "Editar Cliente";
+}
+
+<h2 class="titulo">@ViewBag.Subtitle</h2>
+<hr />
+
+<div class="card bg-light p-5">
+    @*Criação de um formulario de acordo com um determinado model utilizando os dados de nossos clientes*@
+    <form asp-controller="Home" asp-action="EditarCliente">
+        <div class="form-group">
+            @Html.HiddenFor(model => model.Id)@*Criação de um campo oculto para que nós possamos carregar o id*@
+            @*Para apresentar em nossa label o valor que está em nossa Model.Cliente*@
+            @Html.LabelFor(model => model.Nome)
+            <br />
+            @Html.EditorFor(model => model.Nome)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.SobreNome)
+            <br />
+            @Html.EditorFor(model => model.SobreNome)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Telefone)
+            <br />
+            @Html.EditorFor(model => model.Telefone)
+        </div>
+
+        <a asp-controller="home" asp-action="index" class="btn btn-primary">Cancelar</a>
+        <button class="btn btn-primary">Salvar</button>
+    </form>
+</div>
+
+
